@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+        header h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #777;
+    
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>har har har 💀💀</h1>
+        <h2>Your IP address is: <span id="user-ip">gimme time i gotta think ok</span></h2>
+    </header>
+
+    
+    <img src="iimage.gif" alt="skill issue" width="600" height="400">
+    <h3>While your here, you might as well subscribe...</h3>
+    <p><a href="https://www.youtube.com/@vVearon">
+        <img src="waaat.png" alt="pls" width="180" height="75">
+        </a></p>
+
+    
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('user-ip').textContent = data.ip;
+            })
+            .catch(error => {
+                document.getElementById('user-ip').textContent = 'Unable to fetch IP';
+            });
+    </script>
+</body>
+</html>
